@@ -1,0 +1,29 @@
+{
+  "name": "cdk",
+  "version": "0.1.0",
+  "bin": {
+    "cdk": "bin/cdk.js"
+  },
+  "scripts": {
+    "cdk": "cdk",
+    "cdklocal": "cdklocal",
+    "cdk:bootstrap": "dotenv -e ../../.env -- cdklocal bootstrap",
+    "cdk:synth": "dotenv -e ../../.env -- cdklocal synth",
+    "cdk:deploy": "dotenv -e ../../.env -- cdklocal deploy",
+    "cdk:diff": "dotenv -e ../../.env -- cdklocal diff",
+    "check": "aws --endpoint-url=http://localhost:4566 s3api get-bucket-notification-configuration --bucket test-bucket"
+  },
+  "devDependencies": {
+    "@types/node": "20.11.19",
+    "aws-cdk": "2.130.0",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3"
+  },
+  "dependencies": {
+    "aws-cdk-lib": "2.130.0",
+    "aws-cdk-local": "^2.18.0",
+    "aws-cli": "^0.0.2",
+    "constructs": "^10.0.0",
+    "source-map-support": "^0.5.21"
+  }
+}
